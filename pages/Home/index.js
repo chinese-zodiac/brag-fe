@@ -13,7 +13,7 @@ import { ADDRESS_AUTO_REWARD_POOL, ADDRESS_BRAG, ADDRESS_BRAGCZUSD_PAIR, ADDRESS
 import useAutoRewardPool from "../../hooks/useAutoRewardPool";
 import useCurrentEpoch from "../../hooks/useCurrentEpoch";
 import BragLogo from '../../public/static/assets/images/BRAG.png';
-import BtcbLogo from '../../public/static/assets/images/BTCB.png';
+import BtcbLogo from '../../public/static/assets/images/btcb.svg';
 import CZCashLogo from '../../public/static/assets/images/czcash.png';
 import HeaderBanner from '../../public/static/assets/images/headerbanner.png';
 import RocketBull from '../../public/static/assets/images/Refined Mascot Full.png';
@@ -152,23 +152,23 @@ function Home() {
         </div>
 
         <Web3ModalButton className="mt-5 mb-5" />
-        <p className='has-text-grey-lighter is-size-7 is-dark' style={{ position: "absolute", bottom: "0", left: "0", right: "0", zIndex: "2", backgroundColor: "rgba(0,10,40,0.8)" }}>
+        <p className='has-text-grey-lighter is-size-7 is-dark' style={{ position: "absolute", bottom: "0", left: "0", right: "0", zIndex: "2", backgroundColor: "rgba(40,14,0,0.8)" }}>
           <span className="mr-2 mb-0 is-inline-block has-text-left" style={{ width: "11em" }}>Network: {!!account ? (chainId == 56 ? (<span className="has-text-success">✓ BSC</span>) : <span className="has-text-error has-text-danger">❌NOT BSC</span>) : "..."}</span>
           <span className="mt-0 is-inline-block has-text-left" style={{ width: "11em" }}>Wallet: {!!account ? shortenAddress(account) : "..."}</span>
         </p>
       </div>
       <div className="m-0 " style={{ background: "linear-gradient(301deg, rgba(31,1,9,1) 0%, rgba(30,20,0,1) 100%)", paddingBottom: "5em", paddingTop: "1em" }}>
-        <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+        <div>
+          <img src={RocketBull} width={360} style={{ position: 'relative', right: '12px', transform: 'scaleX(-1)' }} />
+        </div>
+        <div style={{ display: "flex", justifyContent: "center", alignItems: "center", columnGap: '30px' }}>
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-            <a href="https://BRAG.io" target="_blank">
+            <a href="https://bragbull.com" target="_blank">
               <img src={BragLogo} width={110} height={110} alt="BRAG symbol" />
             </a>
             <div>
               ${bragPrice?.substring(0, 10)}
             </div>
-          </div>
-          <div>
-            <img src={RocketBull} width={2904 / 15} height={2804 / 15} />
           </div>
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
             <a target="_blank" href="https://bitcoin.org">
@@ -277,7 +277,7 @@ function Home() {
           <h3 className="outline-text" style={{ margin: "2rem 0 2rem 0", fontSize: "2rem", fontWeight: 'bold', color: primaryColor, }}>
             BRAG Stats
           </h3>
-          <div className="columns" style={{ border: "3px solid rgb(196, 157, 129)", backgroundColor: "rgb(66, 65, 42)", borderRadius: '1em', padding: "1.5em 1.5em 1.5em 1.5em" }}>
+          <div className="columns" style={{ border: "3px solid rgb(196, 157, 129)", backgroundColor: "rgb(66, 55, 42)", borderRadius: '1em', padding: "1.5em 1.5em 1.5em 1.5em" }}>
             <Stat
               color={secondaryColor}
               title="Market Cap"
@@ -307,7 +307,7 @@ function Home() {
           <h3 className="outline-text" style={{ margin: "2rem 0 2rem 0", fontSize: "2rem", fontWeight: 'bold', color: primaryColor, }}>
             BRAG Performance
           </h3>
-          <div className="columns" style={{ border: "3px solid rgb(196, 157, 129)", backgroundColor: "rgb(66, 65, 42)", borderRadius: '1em', padding: "1.5em 1.5em 1.5em 1.5em" }}>
+          <div className="columns" style={{ border: "3px solid rgb(196, 157, 129)", backgroundColor: "rgb(66, 55, 42)", borderRadius: '1em', padding: "1.5em 1.5em 1.5em 1.5em" }}>
             <Stat
               color={secondaryColor}
               title="Burned"

@@ -74,14 +74,14 @@ const Web3ModalButton = ({className}) => {
     {!account ? (<>
     {(injectedState == INJECTED_STATE.ACTIVE) && (<>
       <p className="control">
-        <button title="Connect your browser wallet" className="button is-dark is-rounded is-large" style={{width:"6em", backgroundColor:"rgba(0,10,40,0.8)",border:"solid #126a85 2px"}} onClick={()=>activateProvider("injected")} >
+        <button title="Connect your browser wallet" className="button is-dark is-rounded is-large" style={{width:"6em", backgroundColor:"rgba(40,14,0,0.8)",border:"solid #843412 2px"}} onClick={()=>activateProvider("injected")} >
           <span className="icon is-small p-1" >
             <img src={MetamaskLogo} />
           </span>
         </button>
       </p>
       <p className="control">
-        <button title="Connect with WalletConnect" className="button is-dark is-rounded is-large" style={{width:"6em", backgroundColor:"rgba(0,10,40,0.8)",border:"solid #126a85 2px"}} onClick={()=>activateProvider("walletconnect")}>
+        <button title="Connect with WalletConnect" className="button is-dark is-rounded is-large" style={{width:"6em", backgroundColor:"rgba(40,14,0,0.8)",border:"solid #843412 2px"}} onClick={()=>activateProvider("walletconnect")}>
           <span className="icon is-small">
             <img src={WalletConnectLogo} />
           </span>
@@ -90,7 +90,7 @@ const Web3ModalButton = ({className}) => {
     </>)}
     {(injectedState == INJECTED_STATE.NONE) && (<>
       <p className="control">
-        <button title="Connect with WalletConnect" className="button is-dark is-rounded is-large" style={{width:"12em", backgroundColor:"rgba(0,10,40,0.8)",border:"solid #126a85 2px"}} onClick={()=>activateProvider("walletconnect")}>
+        <button title="Connect with WalletConnect" className="button is-dark is-rounded is-large" style={{width:"12em", backgroundColor:"rgba(40,14,0,0.8)",border:"solid #843412 2px"}} onClick={()=>activateProvider("walletconnect")}>
           <span className="icon is-small">
             <img src={WalletConnectLogo} />
           </span>
@@ -99,14 +99,14 @@ const Web3ModalButton = ({className}) => {
     </>)}
     {(injectedState == INJECTED_STATE.PENDING) && (<>
       <p className="control">
-        <button title="Connect with WalletConnect" className="button is-dark is-rounded is-large" style={{width:"12em", backgroundColor:"rgba(0,10,40,0.8)",border:"solid #126a85 2px"}} onClick={()=>activateProvider("walletconnect")}>
+        <button title="Connect with WalletConnect" className="button is-dark is-rounded is-large" style={{width:"12em", backgroundColor:"rgba(40,14,0,0.8)",border:"solid #843412 2px"}} onClick={()=>activateProvider("walletconnect")}>
             <span className='is-size-6'>BRAG: <span className='has-text-warning'>CONNECTING...</span></span>
         </button>
       </p>  
     </>)}
     </>) : (<>
     <p className="control">
-      <button title="Disconnect your wallet" className="button is-dark is-rounded is-large" style={{width:"12em", backgroundColor:"rgba(0,10,40,0.8)",border:"solid #126a85 2px"}} onClick={() => {console.log("deactivate"); deactivate();}}>
+      <button title="Disconnect your wallet" className="button is-dark is-rounded is-large" style={{width:"12em", backgroundColor:"rgba(40,14,0,0.8)",border:"solid #843412 2px"}} onClick={() => {console.log("deactivate"); deactivate();}}>
         <span className='is-size-6'>BRAG: {!!chainId ? <span className='has-text-success'>OK</span> : <span className='has-text-danger'>WRONG NETWORK</span>}</span>
       </button>
     </p></>
