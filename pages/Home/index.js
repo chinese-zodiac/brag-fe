@@ -19,6 +19,7 @@ import HeaderBanner from '../../public/static/assets/images/headerbanner.png';
 import RocketBull from '../../public/static/assets/images/Refined Mascot Full.png';
 import { weiToShortString } from '../../utils/bnDisplay';
 import { czCashBuyLink } from '../../utils/dexBuyLink';
+import { deltaCountdown } from '../../utils/timeDisplay';
 import "./index.module.scss";
 
 
@@ -67,6 +68,7 @@ function Home() {
   const btcbPrice = useCoingeckoPrice("bitcoin");
 
   const currentEpoch = useCurrentEpoch();
+  const launchEpoch = 1680606000;
 
   const [bragPrice, setBragPrice] = useState("0");
   const [bragMcapWad, setbragMcapWad] = useState(parseEther("0"));
@@ -161,6 +163,10 @@ function Home() {
         <div>
           <img src={RocketBull} width={360} style={{ position: 'relative', right: '12px', transform: 'scaleX(-1)' }} />
         </div>
+        {(!!currentEpoch && currentEpoch < launchEpoch) && (<>
+          <h2 style={{ fontSize: '24px' }}>$BRAG LAUNCH:</h2>
+          <h3 style={{ fontSize: '48px' }}>{deltaCountdown(currentEpoch, launchEpoch)}</h3>
+        </>)}
         <div style={{ display: "flex", justifyContent: "center", alignItems: "center", columnGap: '30px' }}>
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
             <a href="https://bragbull.com" target="_blank">
