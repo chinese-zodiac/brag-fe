@@ -195,7 +195,7 @@ function Home() {
           <img src={CZCashLogo} style={{ height: "1em", marginLeft: "0.1em", position: "relative", top: "0.1em" }} alt="CZ.Cash" />
         </a>
         <a target="_blank" href={SOCIAL_TELEGRAM} className="button is-dark is-outlined is-large mt-0 mb-5 is-rounded" style={{ display: "block", width: "12em", border: "solid #853a12 2px", color: "white", marginLeft: "auto", marginRight: "auto", paddingTop: "0.45em" }} >
-          CHAT ROOM
+          CHAT ROOM <span className="icon" style={{ marginLeft: '-0.25em' }}><i className="fa-brands fa-telegram"></i></span>
         </a>
         {/* Rewards Block */}
         <div className="container is-2" style={{ padding: "0 2em 2em 2em" }}>
