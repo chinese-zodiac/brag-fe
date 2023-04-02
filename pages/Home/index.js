@@ -10,6 +10,7 @@ import Footer from '../../components/Footer';
 import Stat from '../../components/Stat';
 import Web3ModalButton from '../../components/Web3ModalButton';
 import { ADDRESS_AUTO_REWARD_POOL, ADDRESS_BRAG, ADDRESS_BRAGCZUSD_PAIR, ADDRESS_BTCB, ADDRESS_CZUSD } from '../../constants/addresses';
+import { SOCIAL_TELEGRAM } from '../../constants/social';
 import useAutoRewardPool from "../../hooks/useAutoRewardPool";
 import useCurrentEpoch from "../../hooks/useCurrentEpoch";
 import BragLogo from '../../public/static/assets/images/BRAG.png';
@@ -192,6 +193,9 @@ function Home() {
         <a target="_blank" href={czCashBuyLink(ADDRESS_BRAG)} className="button is-dark is-outlined is-large mt-0 mb-5 is-rounded" style={{ display: "block", width: "12em", border: "solid #853a12 2px", color: "white", marginLeft: "auto", marginRight: "auto", paddingTop: "0.45em" }} >
           BUY ON
           <img src={CZCashLogo} style={{ height: "1em", marginLeft: "0.1em", position: "relative", top: "0.1em" }} alt="CZ.Cash" />
+        </a>
+        <a target="_blank" href={SOCIAL_TELEGRAM} className="button is-dark is-outlined is-large mt-0 mb-5 is-rounded" style={{ display: "block", width: "12em", border: "solid #853a12 2px", color: "white", marginLeft: "auto", marginRight: "auto", paddingTop: "0.45em" }} >
+          CHAT ROOM
         </a>
         {/* Rewards Block */}
         <div className="container is-2" style={{ padding: "0 2em 2em 2em" }}>
