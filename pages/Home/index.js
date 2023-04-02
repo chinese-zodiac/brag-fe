@@ -183,7 +183,7 @@ function Home() {
         <p>Contract address</p> */}
         <br />
         {/* BUY BUTTON LINK */}
-        <a target="_blank" href={czCashBuyLink(ADDRESS_BTCB)} className="button is-dark is-outlined is-large mt-0 mb-5 is-rounded" style={{ display: "block", width: "12em", border: "solid #853a12 2px", color: "white", marginLeft: "auto", marginRight: "auto", paddingTop: "0.45em" }} >
+        <a target="_blank" href={czCashBuyLink(ADDRESS_BRAG)} className="button is-dark is-outlined is-large mt-0 mb-5 is-rounded" style={{ display: "block", width: "12em", border: "solid #853a12 2px", color: "white", marginLeft: "auto", marginRight: "auto", paddingTop: "0.45em" }} >
           BUY ON
           <img src={CZCashLogo} style={{ height: "1em", marginLeft: "0.1em", position: "relative", top: "0.1em" }} alt="CZ.Cash" />
         </a>
