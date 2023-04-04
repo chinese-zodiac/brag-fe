@@ -219,26 +219,26 @@ function Home() {
               <Stat
                 color={primaryColor}
                 title="Earned"
-                primaryText={`${commify(formatEther((totalRewardsReceived ?? BigNumber.from("0")).mul(10 ** 10)))}\nBTCB`}
-                secondaryText={`$ ${commify((parseFloat(formatEther((totalRewardsReceived ?? BigNumber.from("0")).mul(10 ** 10))) * (btcbPrice ?? 0)).toFixed(2))}`}
+                primaryText={`${commify(formatEther((totalRewardsReceived ?? BigNumber.from("0"))))}\nBTCB`}
+                secondaryText={`$ ${commify((parseFloat(formatEther((totalRewardsReceived ?? BigNumber.from("0")))) * (btcbPrice ?? 0)).toFixed(2))}`}
               />
               <Stat
                 color={primaryColor}
                 title="Per Day"
-                primaryText={`${commify(totalStaked.gt(0) ? formatEther((rewardPerSecond?.mul(86400).mul(combinedStakedBalance ?? 0).div(totalStaked)).mul(10 ** 10)) : 0)}\nBTCB`}
-                secondaryText={`$ ${commify(totalStaked.gt(0) ? (parseFloat(formatEther((rewardPerSecond?.mul(86400).mul(combinedStakedBalance ?? 0).div(totalStaked)).mul(10 ** 10))) * (btcbPrice ?? 0)).toFixed(2) : 0)}`}
+                primaryText={`${commify(totalStaked.gt(0) ? formatEther((rewardPerSecond?.mul(86400).mul(combinedStakedBalance ?? 0).div(totalStaked))) : 0)}\nBTCB`}
+                secondaryText={`$ ${commify(totalStaked.gt(0) ? (parseFloat(formatEther((rewardPerSecond?.mul(86400).mul(combinedStakedBalance ?? 0).div(totalStaked)))) * (btcbPrice ?? 0)).toFixed(2) : 0)}`}
               />
               <Stat
                 color={secondaryColor}
                 title="Held"
-                primaryText={`${commify(formatEther((accBtcbBal ?? BigNumber.from("0")).mul(10 ** 10)))}\nBTCB`}
-                secondaryText={`$ ${commify((parseFloat(formatEther((accBtcbBal ?? BigNumber.from("0")).mul(10 ** 10))) * (btcbPrice ?? 0)).toFixed(2))}`}
+                primaryText={`${commify(formatEther((accBtcbBal ?? BigNumber.from("0"))))}\nBTCB`}
+                secondaryText={`$ ${commify((parseFloat(formatEther((accBtcbBal ?? BigNumber.from("0")))) * (btcbPrice ?? 0)).toFixed(2))}`}
               />
               <Stat
                 color={secondaryColor}
                 title="Pending"
-                primaryText={`${commify(formatEther((pendingReward ?? BigNumber.from("0")).mul(10 ** 10)))}\nBTCB`}
-                secondaryText={`$ ${commify((parseFloat(formatEther((pendingReward ?? BigNumber.from("0")).mul(10 ** 10))) * (btcbPrice ?? 0)).toFixed(2))}`}
+                primaryText={`${commify(formatEther((pendingReward ?? BigNumber.from("0"))))}\nBTCB`}
+                secondaryText={`$ ${commify((parseFloat(formatEther((pendingReward ?? BigNumber.from("0")))) * (btcbPrice ?? 0)).toFixed(2))}`}
               />
               <Stat
                 color={primaryColor}
@@ -268,20 +268,20 @@ function Home() {
             <Stat
               color={secondaryColor}
               title="Accumulated"
-              primaryText={`${commify(formatEther((btcbTotalPaidWad ?? BigNumber.from("0")).mul(10 ** 10)))} BTCB`}
-              secondaryText={`$ ${commify((parseFloat(formatEther((btcbTotalPaidWad ?? BigNumber.from("0")).mul(10 ** 10))) * (btcbPrice ?? 0)).toFixed(2))}`}
+              primaryText={`${commify(formatEther((btcbTotalPaidWad ?? BigNumber.from("0"))))} BTCB`}
+              secondaryText={`$ ${commify((parseFloat(formatEther((btcbTotalPaidWad ?? BigNumber.from("0")))) * (btcbPrice ?? 0)).toFixed(2))}`}
             />
             <Stat
               color={secondaryColor}
               title="Distributed"
-              primaryText={`${commify(formatEther((totalRewardsPaid ?? BigNumber.from("0")).mul(10 ** 10)))} BTCB`}
-              secondaryText={`$ ${commify((parseFloat(formatEther((totalRewardsPaid ?? BigNumber.from("0")).mul(10 ** 10))) * (btcbPrice ?? 0)).toFixed(2))}`}
+              primaryText={`${commify(formatEther((totalRewardsPaid ?? BigNumber.from("0"))))} BTCB`}
+              secondaryText={`$ ${commify((parseFloat(formatEther((totalRewardsPaid ?? BigNumber.from("0")))) * (btcbPrice ?? 0)).toFixed(2))}`}
             />
             <Stat
               color={secondaryColor}
               title="Today"
-              primaryText={`${commify(formatEther((rewardPerSecond ?? BigNumber.from("0"))?.mul(86400).mul(10 ** 10)))} BTCB`}
-              secondaryText={`$ ${commify((parseFloat(formatEther((rewardPerSecond ?? BigNumber.from("0")).mul(86400).mul(10 ** 10))) * (btcbPrice ?? 0)).toFixed(2))}`}
+              primaryText={`${commify(formatEther((rewardPerSecond ?? BigNumber.from("0"))?.mul(86400)))} BTCB`}
+              secondaryText={`$ ${commify((parseFloat(formatEther((rewardPerSecond ?? BigNumber.from("0")).mul(86400))) * (btcbPrice ?? 0)).toFixed(2))}`}
             />
           </div>
           <h3 className="outline-text" style={{ margin: "2rem 0 2rem 0", fontSize: "2rem", fontWeight: 'bold', color: primaryColor, }}>
