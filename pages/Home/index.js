@@ -14,10 +14,10 @@ import { SOCIAL_TELEGRAM } from '../../constants/social';
 import useAutoRewardPool from "../../hooks/useAutoRewardPool";
 import useCurrentEpoch from "../../hooks/useCurrentEpoch";
 import BragLogo from '../../public/static/assets/images/BRAG.png';
+import RocketBull from '../../public/static/assets/images/Refined Mascot Full.png';
 import BtcbLogo from '../../public/static/assets/images/btcb.svg';
 import CZCashLogo from '../../public/static/assets/images/czcash.png';
 import HeaderBanner from '../../public/static/assets/images/headerbanner.png';
-import RocketBull from '../../public/static/assets/images/Refined Mascot Full.png';
 import { weiToShortString } from '../../utils/bnDisplay';
 import { czCashBuyLink } from '../../utils/dexBuyLink';
 import { deltaCountdown } from '../../utils/timeDisplay';
@@ -117,9 +117,11 @@ function Home() {
       return;
     }
     const stakedUsd = totalStaked.mul(parseEther(bragPrice)).div(parseEther("1"));
-    const usdPerDay = rewardPerSecond.mul(86400 * 365).mul(parseEther(btcbPrice ?? "0")).div(10 ** 8);
-    console.log({ usdPerDay })
+    const usdPerDay = rewardPerSecond.mul(86400 * 365).mul(parseEther(btcbPrice ?? "0")).div(parseEther('1'));
+    console.log(formatEther(usdPerDay))
     const apr = usdPerDay?.mul(parseEther("100")).div(stakedUsd) ?? BigNumber.from(0);
+    console.log(formatEther(stakedUsd))
+    console.log({ apr })
     setbragAprWad(apr);
   }, [bragPrice, btcbPrice, totalStaked?.toString(), rewardPerSecond?.toString()]);
 
